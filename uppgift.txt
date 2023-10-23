@@ -1,0 +1,14 @@
+Tillverka ett miniräknarprogram som tar in en sträng från tangentbordet bestående av 2 tal
+och en matematisk operator + eller -.
+Ex 5+3
+Du ska plocka ut talen ur Strängen och lagra dessa i varsin heltalsvariabel.
+Sedan ska programmet avgöra vilken operator som används och göra beräkningen.
+Tips:
+Börja med att plocka ut den matematiska operatorn + eller -.
+Använd metoden indexOf exempelvis uträckning.indexOf(”+”) den kommer returnera
+platsen för ”+” om inte ”+” finns returnerar den -1.
+https://www.w3schools.com/java/ref_string_indexof.asp
+int plus_plats= uträckning.indexOf(”+”);
+Om vi hittar ett plustecken då vet vi att 1:a talet finns från plats 0 till plus_plats-1. 2:a talet är
+finns från plats plats+1 till längden av texten-1.
+Längden av texten https://www.w3schools.com/java/ref_string_length.asp
