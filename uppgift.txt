@@ -12,3 +12,4 @@ int plus_plats= uträckning.indexOf(”+”);
 Om vi hittar ett plustecken då vet vi att 1:a talet finns från plats 0 till plus_plats-1. 2:a talet är
 finns från plats plats+1 till längden av texten-1.
 Längden av texten https://www.w3schools.com/java/ref_string_length.asp
+if first is larger than second and larger than the third [0] = firstNumber

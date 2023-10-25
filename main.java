@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class main {
@@ -6,7 +7,7 @@ public class main {
 
         // Skatte avdrag
 
-        // Distance
+       //  Distance
         System.out.println("How long do you live from your job in km? ");
         int userDistance = sc.nextInt();
         boolean eligibleDistance = userDistance >= 50;
@@ -29,7 +30,7 @@ public class main {
         System.out.println("You don't have right to double tax deduction");
         }
 
-        // Beräkning 
+        // calculations
 
         System.out.println("Enter your calculation + or -");
         String calculation = sc.nextLine();
@@ -39,20 +40,54 @@ public class main {
 
         if (calculation.contains("+")) {
             String[] parts = calculation.split("\\+");
-            if( parts.length == 2) {
+            if (parts.length == 2) {
                 int firstNumber = Integer.parseInt(parts[0].trim());
                 int secondNumber = Integer.parseInt(parts[1].trim());
                 int result = firstNumber + secondNumber;
-                System.out.println(result + 10);
-            }
-        } else if (calculation.contains("-")) {
-             String[] partings = calculation.split("\\-");
-            if( partings.length == 2) {
-                int firstNumber = Integer.parseInt(partings[0].trim());
-                int secondNumber = Integer.parseInt(partings[1].trim());
-                int result = firstNumber - secondNumber;
                 System.out.println(result);
             }
+        } else if (calculation.contains("-")) {
+            String[] partings = calculation.split("\\-");
+            if (partings.length == 2) {
+                int firstNumber = Integer.parseInt(partings[0].trim());
+                int secondNumber = Integer.parseInt(partings[1].trim());
+                int result1 = firstNumber - secondNumber;
+                System.out.println(result1);
+
+            }
         }
+
+        // From smallest to largest
+
+        System.out.println("What is the first Numbers");
+        int firstNumber = sc.nextInt();
+
+        System.out.println("What is the second Number");
+        int secondNumber = sc.nextInt();
+
+        System.out.println("What is the third Number");
+        int thirdNumber = sc.nextInt();
+
+        int[] myArray = new int[3];
+
+        if (firstNumber < secondNumber && firstNumber < thirdNumber && secondNumber < thirdNumber) {
+            myArray[0] = firstNumber;
+            myArray[1] = secondNumber;
+            myArray[2] = thirdNumber;
+        } else if (secondNumber < firstNumber && secondNumber < thirdNumber && firstNumber < thirdNumber) {
+            myArray[0] = secondNumber;
+            myArray[1] = firstNumber;
+            myArray[2] = thirdNumber;
+        } else if (thirdNumber < firstNumber && thirdNumber < secondNumber && firstNumber < secondNumber) {
+            myArray[0] = thirdNumber;
+            myArray[1] = firstNumber;
+            myArray[2] = secondNumber;
+        }  else {
+            myArray[0] = thirdNumber;
+            myArray[1] = secondNumber;
+            myArray[2] = firstNumber;
+        }
+
+         System.out.println(Arrays.toString(myArray));
     }
 }
